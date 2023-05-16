@@ -11,18 +11,25 @@ const Navbar = () => {
 
   return (
     <div className="navbar-container">
-      <p className='logo'>
-        <Link href="/">AIR BACKSTAGE</Link>
+      <p className="logo">
+        <Link href="/">
+          <h4>AIR BACKSTAGE</h4>
+        </Link>
       </p>
-
-      <button type="button" className="cart-icon" onClick={() => setShowCart(true)}> <AiOutlineShopping />
-      <span className="cart-item-qty">{totalQuantities}</span>
+ 
+      <button
+        type="button"
+        className="cart-icon"
+        onClick={() => setShowCart(true)}
+      >
+        {" "}
+        <AiOutlineShopping />
+        <span className="cart-item-qty">{totalQuantities}</span>
       </button>
 
-     { showCart && <Cart /> }
-
+      {showCart && <Cart />}
     </div>
-  )
+  );
 }
 
 export default Navbar

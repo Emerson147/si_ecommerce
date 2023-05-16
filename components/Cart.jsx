@@ -16,6 +16,7 @@ const Cart = () => {
     cartItems,
     setShowCart,
     toggleCartItemQuantity,
+    onRemove
   } = useStateContext();
   
   return (
@@ -27,21 +28,21 @@ const Cart = () => {
           onClick={() => setShowCart(false)}
         >
           <AiOutlineLeft />
-          <span className="heading">Your Cart</span>
+          <span className="heading">Tu carrito</span>
           <span className="cart-num-items">({totalQuantities} items)</span>
         </button>
 
         {cartItems.length < 1 && (
           <div className="empty-cart">
             <AiOutlineShopping size={150} />
-            <h3>Your shopping bag is empty</h3>
+            <h3>Tu bolsa de compras esta vacia</h3>
             <Link href="/">
               <button
                 type="button"
                 onClick={() => setShowCart(false)}
                 className="btn"
               >
-                Continue Shopping
+                Seguir comprando
               </button>
             </Link>
           </div>
@@ -62,7 +63,7 @@ const Cart = () => {
                   </div>
                   <div className="flex bottom">
                     <div>
-                      <p className="quantity-desc">
+                      <div className="quantity-desc">
                         <span className="minus" onClick={() => toggleCartItemQuantity(item._id, 'dec')}>
                           <AiOutlineMinus />
                         </span>
@@ -72,9 +73,9 @@ const Cart = () => {
                         <span className="plus" onClick={() => toggleCartItemQuantity(item._id, 'inc')}>
                           <AiOutlinePlus />
                         </span>
-                      </p>
+                      </div>
                     </div>
-                    <button type="button" className="remove-item" onClick="">
+                    <button type="button" className="remove-item" onClick={() => onRemove(item)}>
                       <TiDeleteOutline />
                     </button>
                   </div>
@@ -83,7 +84,7 @@ const Cart = () => {
             ))}
         </div>
         {cartItems.length >= 1 && (
-          <div className="cart-bottom">
+          <div className= "cart-bottom">
             <div className="total">
               <h3>SubTotal:</h3>
               <h3>S/. {totalPrice}</h3>

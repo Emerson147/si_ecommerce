@@ -79,7 +79,7 @@ span.text-red {
 
 .logo {
   color: gray;
-  font-size: 18px;
+  font-size: 25px;
 
 }
 
@@ -157,6 +157,7 @@ span.text-red {
   height: 500px;
   line-height: 0.9;
   width: 100%;
+  margin-top: 30px;
 
 }
 
@@ -197,6 +198,56 @@ span.text-red {
   height: 450px;
 }
 
+/* HERO CONTAINER 2 - ROPA */
+
+.hero-banner-container-2 {
+  padding: 100px 40px;
+  background-color: #dcdcdc;
+  border-radius: 15px;
+  position: relative;
+  height: 500px;
+  line-height: 0.9;
+  width: 100%;
+  margin-top: 80px;
+
+}
+
+.hero-banner-container-2 .beats-solo {
+  font-size: 20px;
+}
+
+.hero-banner-container-2 button {
+  border-radius: 15px;
+  padding: 10px 16px;
+  background-color: #f02d34;
+  color: white;
+  border: none;
+  margin-top: 40px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  z-index: 10000 !important;
+}
+
+.hero-banner-container-2 h3 {
+  font-size: 4rem;
+  margin-top: 4px;
+}
+
+.hero-banner-container-2 h1 {
+  color: white;
+  font-size: 10em;
+  margin-left: -20px;
+  text-transform: uppercase;
+}
+
+.hero-banner-image-2 {
+  position: absolute;
+  top: 0%;
+  right: 20%;
+  width: 450px;
+  height: 450px;
+}
 
 .desc {
   position: absolute;
@@ -387,7 +438,7 @@ span.text-red {
   margin-top: 15px;
   overflow: auto;
   max-height: 70vh;
-  padding: 20px 10px;
+  padding: 10px 10px;
 }
 
 .product {
@@ -426,6 +477,7 @@ span.text-red {
 .total {
   display: flex;
   justify-content: space-between;
+  padding: inherit;
 }
 
 .total h3 {
@@ -806,6 +858,7 @@ span.text-red {
 
   .product-container {
     margin-top: 10px;
+    padding-left: 60px;
   }
 
   .product {
@@ -892,5 +945,6 @@ span.text-red {
   .btn-container {
     width: 300px;
     margin: auto;
+    padding-left: 20px;
   }
 }
