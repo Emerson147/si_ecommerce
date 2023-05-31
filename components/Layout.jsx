@@ -20,15 +20,15 @@ const Layout = ( { children }) => {
         {children}
 
         <a href="https://api.whatsapp.com/send?phone=51926585479&text=Hola, me gustaria Obtener más información acerca de los productos..." 
-            className="float" 
+            className="float pulse" 
             target="_blank">
-        <p className="my-float">
+        <p className="my-float pulse">
           <AiOutlineWhatsApp />
         </p>
   </a>
       </main>
 
-      <footer>
+      <footer>  
         <Footer />
       </footer>
     </div>
