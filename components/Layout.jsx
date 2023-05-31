@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
-
+import { AiOutlineWhatsApp } from 'react-icons/ai';
 
 const Layout = ( { children }) => {
   return (
@@ -18,6 +18,14 @@ const Layout = ( { children }) => {
 
       <main className="main-container">
         {children}
+
+        <a href="https://api.whatsapp.com/send?phone=51926585479&text=Hola, me gustaria Obtener más información acerca de los productos..." 
+            className="float" 
+            target="_blank">
+        <p className="my-float">
+          <AiOutlineWhatsApp />
+        </p>
+  </a>
       </main>
 
       <footer>
